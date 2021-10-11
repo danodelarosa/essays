@@ -1,3 +1,21 @@
 body{
-	background-color: #EEEEF0;
+	/*background-color: #07626B;*/	
+	background-color: #2E543F;
+	color: #CCE4EA;
+	text-align: justify;
+}
+h1,h2,h3{
+	color: #060607;
+}
+a:visited,a:link{
+	color: #ACF2BA;
+}
+a:hover{
+	color: #76FFD5;
+}
+a.inside-links{
+	color: black;
+}
+a.back{
+	text-align: center;
 }
