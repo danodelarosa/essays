@@ -2,7 +2,8 @@ body{
 	/*background-color: #07626B;*/	
 	background-color: #2E543F;
 	color: #CCE4EA;
-	text-align: justify;
+	padding-right: 5%;
+	padding-left: 5%;
 }
 h1,h2,h3{
 	color: #060607;
