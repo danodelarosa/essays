@@ -8,10 +8,10 @@ body{
 h1,h2,h3{
 	color: #060607;
 }
-a:visited,a:link{
+a:link{
 	color: #ACF2BA;
 }
-a:hover{
+a:visited, a:hover{
 	color: #76FFD5;
 }
 a.inside-links{
