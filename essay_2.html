@@ -116,8 +116,134 @@
 		<li>Being productive means working smart, finding the best schedule for doing more things not for doing different things at the same time (multi-task)</li>
 		<li>Do not check emails while coding or you are focused because it can double the time of doing some task (do not get distracted)</li>
 		<li>Is so important having slides, in that way all the listeners can understands you better (in this video there was not slides)</li>
-		<li>Create abstractions or histories for explainig things, this is a easier way of explaning</li>
+		<li>Create abstractions or histories for explainig things, this is an easier way of explaning</li>
 	</ol>
-		
+
+	<p><strong><a href="https://missing.csail.mit.edu/2020/shell-tools/" class="inside-links" target="_blank">Shell tool and scripting:</a></strong><br></p>
+	<ol>
+		<li>
+			Variables
+			<p>foo=bar<br>
+				echo "$foo" -> bar<br>
+				echo '$foo' -> $foo<br>
+				foo=$(pwd)<br>
+				echo "We are in $(pwd)"<br><br>
+				*spaces are important*<br>
+			</p>
+		</li>
+		<li>
+			Functions<br><br>
+			mcd () {<br>
+				mkdir -p "$1"<br>
+				cd "$1"<br>
+			}<br><br>
+			#Debuging<br>
+			shellcheck file.sh<br><br>
+			**-p did not give error if the dir already exists**<br><br>
+		</li>
+		<li>
+			Dollar signs
+			<ul>
+				<li>$0 - Name of the script</li>
+				<li>$1 to $9 - Arguments to the script. $1 is the first argument and so on.</li>
+				<li>$@ - All the arguments</li>
+				<li>$# - Number of arguments</li>
+				<li>$? - Return Exit code of the previous command</li>
+				<li>$$ - Process identification number (PID) for the current script</li>
+				<li>!! - Entire last command, including arguments. A common pattern is to execute a command only for it to fail due to missing permissions; you can quickly re-execute the command with sudo by doing sudo !!</li>
+				<li>$_ - Last argument from the last command. If you are in an interactive shell, you can also quickly get this value by typing Esc followed by .</li><br>
+			</ul>
+		</li>
+		<li>
+			Exit codes
+			<ul>
+				<li>0 is no errors</li>
+				<li>Comething different is an error</li><br>
+			</ul>
+		</li>
+		<li>
+			Output
+			<ul>
+				<li>output -> STDOUT</li>
+				<li>errors -> STDERR</li>
+				<li>true returns 0</li>
+				<li>false returns 1
+					<ul>
+						<br><li>false || echo "Oops, fail"<br>
+						# Oops, fail</li><br>
+						<li>true || echo "Will not be printed"<br>
+						#</li><br>
+						<li>true && echo "Things went well"<br>
+						# Things went well</li><br>
+						<li>false && echo "Will not be printed"<br>
+						#</li><br>
+
+					</ul><br>
+				</li>
+			</ul>
+		</li>
+		<li>diff <(ls foo) <(ls bar)<br>
+		will show differences between files in dirs foo and bar.</li><br>
+		<li>foo? foo*</li><br>
+		<li>
+			Brackets
+			<ul>
+				<li>
+					convert image.{png,jpg}<br>
+					# Will expand to convert image.png image.jpg<br>
+				</li><br>
+				<li>
+					mv *{.py,.sh} folder<br>
+					# Will move all *.py and *.sh files<br>
+				</li><br>
+				<li>
+					touch {foo,bar}/{a..h}<br>
+					# This creates files foo/a, foo/b, ... foo/h, bar/a, bar/b, ... bar/h
+				</li><br>
+				<li>
+					diff <(ls foo) <(ls bar)<br>
+					# Show differences between files in foo and bar
+				</li><br>
+			</ul>
+		</li><br>
+		<li>
+			ShellBang<br>
+			no  -> #!/usr/local/bin/python<br>
+			yes -> #!/usr/bin/env python
+		</li><br>
+		<li>
+			Instead of man use <a href="https://tldr.sh/"> tldr</a>
+		</li><br>
+		<li>
+			Find
+			<ul>
+				<li># Find all directories named src<br>
+				find . -name src -type d<br></li><br>
+				<li># Find all python files that have a folder named test in their path<br>
+				find . -path '*/test/*.py' -type f<br></li><br>
+				<li># Find all files modified in the last day<br>
+				find . -mtime -1<br></li><br>
+				<li># Find all zip files with size in range 500k to 10M<br>
+				find . -size +500k -size -10M -name '*.tar.gz'<br></li><br>
+				<li># Delete all files with .tmp extension<br>
+				find . -name '*.tmp' -exec rm {} \;<br></li><br>
+				<li># Find all PNG files and convert them to JPG<br>
+				find . -name '*.png' -exec convert {} {}.jpg \;<br></li><br>
+				<li>find -name '*PATTERN*'<br>
+				(-iname if you want the pattern matching to be case insensitive)<br></li>
+			</ul>
+		</li><br>
+		<li>
+			Grep
+			<ul>
+				<li>grep -C 5<br>
+				#will print 5 lines before and after the match.</li><br>
+			</ul>
+		</li><br>
+		<li>ctrl + r (search in history)</li><br>
+		<li>ls -r</li><br>
+		<li>tree</li>
+	</ol>
+	<a href="notes/note_01.html" target="_blank">note</a>	
 </body>
 </html>
