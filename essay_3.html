@@ -95,6 +95,59 @@
 
 	<p><strong><a href="https://www.youtube.com/watch?v=dEaecUuEqfc&ab_channel=GoogleTechTalks" class="inside-links" target="_blank">The Quantum Conspiracy: What Popularizers of QM Don't Want You to Know</a></strong><br>This video is click bait but the speaker is honest and do this clarification at the begginig, but is no click bait at all because he is traying to show us a different way of understanding the quantum mechanics maths but instead of the calssical view, he uses the information theory to give it a side view, but to be honest I have not understand at all what is the main point but one thiks is more clear for me, maybe the multiverse does not exist and neither the instan commmunication but like Albert Einstein said "The most incomprehensible thing abut the universe is that is comprehensible" and maybe that is the main point about this talk</p>
 
+	<p><strong><a href="https://missing.csail.mit.edu/2020/editors/" class="inside-links" target="_blank">Editors (Vim)</a></strong><br>Modes:</p>
+	<ul>
+		<li>Insert (i)</li>
+		<li>Replace (R)</li>
+		<li>Visual mode (v)</li>
+		<li>Visual Line mode (V)</li>
+		<li>Visual Block mode (Ctrl + v)</li>
+		<li>Insert (i)</li>
+		<li>Command line (:)</li>
+	</ul>
+	<p>Command line</p>
+	<ul>
+		<li>:q quit (close window)</li>
+		<li>:w save (“write”)</li>
+		<li>:wq save and quit</li>
+		<li>:e {name of file} open file for editing</li>
+		<li>:ls show open buffers</li>
+		<li>:help {topic} open help</li>
+		<li>:help :w opens help for the :w command</li>
+		<li>:help w opens help for the w movement</li>
+	</ul>
+	<p>Movement</p>
+	<ul>
+		<li>(left, down, up, right) (hjkl)</li>
+		<li>Words: w (next word), b (beginning of word), e (end of word)</li>
+		<li>Lines: 0 (beginning of line), ^ (first non-blank character), $ (end of line)</li>
+		<li>Screen: H (top of screen), M (middle of screen), L (bottom of screen)</li>
+		<li>Scroll: Ctrl-u (up), Ctrl-d (down)</li>
+		<li>File: gg (beginning of file), G (end of file)</li>
+		<li>Line numbers: {number}G (line {number})</li>
+		<li>Find (f/F)</li>
+		<li>To (t/T)</li>
+	</ul>
+	<p>Edits</p>
+	<ul>
+		<li>insert below (o) above (O)</li>
+		<li>Delete d{motion} dw is delete word, d$ is delete to end of line, d0 is delete to beginning of line</li>
+		<li>Change c{motion} cw is change word</li>
+		<li>Delete character (x)</li>
+		<li>Substitute character (s)</li>
+		<li>Undo(Ctrl + u) </li>
+		<li>Copy (y)</li>
+		<li>Paster (p)</li>
+		<li>/search</li>
+		<li>ci{charcter}</li>
+	</ul>
+	<p>Counts</p>
+	<ul>
+		<li>3w move 3 words forward</li>
+		<li>5j move 5 lines down</li>
+		<li>7dw delete 7 words</li>
+	</ul>
+	<p>	</p>
 	<h2>Readings</h2>
 	<p><strong><a href="http://wiki.c2.com/?TestDrivenDevelopment" class="inside-links" target="_blank">Test Driven Development</a></strong><br>Test Driven Development or TDD is a idealy workflow when you have to make tests between each stage of you lifecycle development, there are 5 stages and this worflow or loop for developing looks like this:</p>
 	<ul>
@@ -134,6 +187,23 @@
 		<li>mvn help:describe -Dplugin=org.apache.tomcat.maven:tomcat7-maven-plugin</li>
 		<li>mvn deploy</li>
 		<li>mvn dependency:tree -Dverbose</li>
+	</ul>
+	<p>This is the build cycle of maven</p>
+	<ul>
+		<li>validate - validate the project is correct and all necessary information is available</li>
+		<li>compile - compile the source code of the project</li>
+		<li>test - test the compiled source code using a suitable unit testing framework. These tests should not require the code packaged or deployed</li>
+		<li>package - take the compiled code and package it in its distributable format, such as a JAR.</li>
+		<li>verify - run any checks on results of integration tests to ensure quality criteria are met</li>
+		<li>install - install the package into the local repository, for use as a dependency in other projects locally</li>
+		<li>deploy- done in the build environment, copies the final package to the remote repository for sharing with other developers and projects.</li>
+	</ul>
+
+	<p>Extra</p>
+	<ul>
+		<li>mvn archetype:generate -DgroupId=com.mycompany.app -DartifactId=my-app -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false</li>
+		<li>mvn package</li>
+		<li>java -cp target/my-app-1.0-SNAPSHOT.jar com.mycompany.app.App</li>
 	</ul>
 </body>
 </html>
