@@ -40,5 +40,54 @@
 
 	<p><strong><a href="https://www.youtube.com/watch?v=MmVCYqs3mko&list=PLm4zG1ucbXnXTGfqr-JaIoYpq502spti4&index=4&t=9s&ab_channel=TEDxTalks" class="inside-links" target="_blank">Why you should have your own black box | Matthew Syed | TEDxLondonBusinessSchool</a></strong><br>We not just as Developers, even as Persons, We should learn about our mistakes to improve and try to reduce the risk of failure, try to have a black box instead a static mindset of ignoring and only justify your mistakes and remember "We always can be better"</p>
 
+	<p><strong><a href="https://www.youtube.com/watch?v=60P7717-XOQ&list=PLm4zG1ucbXnXTGfqr-JaIoYpq502spti4&index=4&ab_channel=TED" class="inside-links" target="_blank">Stephen Wolfram: Computando hacia una teoría de todo</a></strong><br>Programming and computers are just tools for getting answers for realy complex problems that we could never imagine thanks to its complex nature, I do not know if Stephen Wolfram is saying if the whole universe is just a computer, an algorithm or a "simulation" but we have in our hands a powerfull key for answer questions and que should use it wisely</p>
+
+	<p><strong><a href="https://www.youtube.com/watch?v=xkP70Zhhix4&list=PLm4zG1ucbXnXTGfqr-JaIoYpq502spti4&index=5&ab_channel=GoogleTechTalks" class="inside-links" target="_blank">GTAC 2014: I Don't Test Often ... But When I Do, I Test in Production</a></strong><br>Netflix at least in 2014 had a philosophy of not just doing the basic tests (unit, integration and stress), they had in mind that the real problems occurs in production, and this was learned by the bad way, so they created or implemented new ways for testing and not hust because they can, they had to do this because Netflix is so complex and distributed that is difficult make stable and bullet proof versions or simply there are outside factors that netflix can not handle and for trying to create better software and a more stable Natflix they implement 3 different and extra tests in their production version</p>
+	<ul>
+		<li>Simian Army (simulated growing distruction)</li>
+		<li>Production code coverage and analysis (find the real user's path ways)</li>
+		<li>Canary Deployments (Push small number of instances)</li>
+	</ul>
+
+	<p>*TIP* make tests for checking if other of your services is slow down or could be broken by the shutdown of another</p>
+
+	<p><strong><a href="https://www.infoq.com/interviews/kolton-andrus-on-breaking-things-at-netflix/" class="inside-links" target="_blank">Kolton Andrus on Breaking Things at Netflix</a></strong><br>Did you know that exists a work where you brake things just for see what happens? well in neftlix exists a whole team that understands this "mistakes and broken systems always will happen, but how to face, fix and handle them is what defines you" is similar to vaccines, is not about only using face masks (tests before deployment) is about giving you a reduced version of a virus (braking things in production but in a safe or controled space) to see how you body will react to this problem (solve this simulated problems for future disasters) so thanks to this thinking Kotlon Andrus create FIT (Failure Injection Testing) an autoserved framework for helping to make resilient systems.</p>
+
+	<h2>Readings</h2>
+	<p><strong><a href="https://www.gremlin.com/community/tutorials/chaos-engineering-the-history-principles-and-practice/" class="inside-links" target="_blank">Chaos Engineering: the history, principles, and practice</a></strong><br>Brief history of Chaos engineering</p>
+	<ul>
+		<li>Chaos monkey</li>
+		<li>Simian Army</li>
+		<li>FIT (Failure Injection Testing)</li>
+		<li>Gremlin</li>
+		<li>Chaos conf</li>
+		<li>AWS - FIS (Failure Injection Simulation)</li>
+		<li>State of chaos engineering report</li>
+	</ul>
+	
+	
+	<p>How it works?</p>
+	<ol>
+		<li>Plan an experiment</li>
+		<li>Contain the blast radius of testing</li>
+		<li>Scale or Fix</li>
+	</ol>
+	
+	<p>Types of Chaos Engineering Experiments:</p>
+	<ul>
+		<li>Known Knowns - Things you are aware of and understand</li>
+		<li>Known Unknowns - Things you are aware of but don’t fully understand</li>
+		<li>Unknown Knowns - Things you understand but are not aware of</li>
+		<li>Unknown Unknowns - Things you are neither aware of nor fully</li>
+	</ul>
+
+	<p>How to plan your first chaos experiment?</p>
+	<ol>
+		<li>Create a hypthesis</li>
+		<li>Measure the impact</li>
+		<li>Have a rollback plan</li>
+		<li>Go fix it</li>
+	</ol>
+
 </body>
 </html>
